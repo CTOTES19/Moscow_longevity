@@ -1,0 +1,36 @@
+
+.tweek {
+    margin-top: 60px;
+}
+
+.tweek--wrapper-title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+}
+
+.tweek--wrapper-filters {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tweek--wrapper-filters-block-text {
+    margin-left: 10px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.tweek--wrapper-filters-block-input {
+    width: 30px;
+    height: 30px;
+}
+
+.tweek--wrapper-filters-block {
+    margin-top: 10px;
+    display: flex; 
+    align-items: center;
+}

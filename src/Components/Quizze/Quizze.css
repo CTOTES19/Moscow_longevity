@@ -1,0 +1,265 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.quizzmain {
+    min-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    z-index: 1000000001 !important;
+    background: var(--bgc);
+}
+
+.quizzmain__container {
+    margin: 0 auto;
+    min-width: 100%;
+    padding: 0px 20px;
+    z-index: 1000000001 !important;
+}
+
+.block__wrapper {
+    margin-top: 7%;
+    z-index: 1000000001 !important;
+}
+
+.block {
+    max-width: 75%;
+    margin: 0px auto;
+    background-color: #fefefe;
+    opacity: 1;
+    -webkit-box-shadow: 25px 25px 15px #0000005e;
+    box-shadow: 25px 25px 15px #0000005e;
+    border-radius: 25px;
+    height: 100%;
+    align-items: center;
+    z-index: 2;
+}
+
+.btns {
+    display: flex;
+}
+
+.toanswer,
+.tohome,
+.toform {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 20px 50px 20px 50px;
+    background: #ff226d;
+    color: #eee;
+    font-size: 23px;
+    width: 100%;
+    border: none;
+    z-index: 20;
+    cursor: pointer;
+    border-radius: 0 0 25px 25px;
+    transition: background 0.3s;
+}
+
+.toanswer:hover {
+    background: #bb194f;
+}
+
+.active-g {
+    background-color: rgba(167, 167, 167, 0.655);
+    background-color: rgba(36, 94, 121, 0.303);
+}
+
+
+/* RESPONSIVE STYLES */
+/* 1440px */
+@media screen and (max-width: 1440px) {
+    .block__wrapper {
+        margin-top: 0%;
+    }
+}
+
+/* 768px */
+@media screen and (max-width: 768px) {
+    .block__wrapper {
+        margin-top: 25%;
+    }
+
+    .quizzmain {
+        /* margin-top: 10%; */
+        height: 100%;
+        width: 100%;
+    }
+
+    .block {
+        max-width: 85%;
+        font-size: 18px;
+    }
+
+    .wrapper__quastion {
+        padding: 0 20px;
+    }
+
+    .block__question {
+        font-size: 20px;
+        width: 100%;
+        font-weight: 500;
+        /* padding: 35px 3px 3px 0; */
+    }
+
+    .block__answers {
+        width: 100%;
+        margin: 20px auto;
+        padding: 20px;
+        -webkit-column-gap: 20px;
+        column-gap: 20px;
+    }
+
+    .toanswer,
+    .tohome,
+    .toform {
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+
+    .label {
+        min-height: 40px;
+        max-width: 380px;
+        padding: 10px 5px;
+        font-weight: 400;
+        z-index: 1000000001 !important;
+    }
+}
+
+/* 565px */
+@media screen and (max-width: 565px) {
+    .block__wrapper {
+        margin-top: 30%;
+    }
+
+    .quizzmain {
+        width: 100%;
+    }
+
+    .container {
+        margin: 0 auto;
+        width: 100%;
+        padding: 0px 5px;
+    }
+
+    .block {
+        max-width: 95%;
+        font-size: 15px;
+    }
+
+    .wrapper__quastion {
+        padding: 0 10px;
+    }
+
+    .block__question {
+        font-size: 18px;
+        width: 100%;
+        font-weight: 500;
+        /* padding: 35px 3px 3px 0; */
+    }
+
+    .block__answers {
+        width: 100%;
+        margin: 20px auto;
+        /* margin-top: 20px; */
+        padding: 10px;
+        -webkit-column-gap: 20px;
+        column-gap: 20px;
+        z-index: 1000000001 !important;
+    }
+
+    .toanswer,
+    .tohome,
+    .toform {
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+    
+    .label {
+        min-height: 40px;
+        max-width: 380px;
+        padding: 10px 5px;
+        font-weight: 400;
+    }
+}
+
+@media screen and (min-height: 634px) {
+    .block__wrapper {
+        /* margin-top: 15%; */
+        z-index: 2;
+    }
+}
+/* 426px */
+@media screen and (max-width: 430px) {
+    .block__wrapper {
+        margin-top: 35%;
+    }
+
+    .quizzmain {
+        width: 100%;
+    }
+
+    .container {
+        margin: 0 auto;
+        width: 100%;
+        padding: 0px 0px;
+    }
+
+    .block {
+        max-width: 95%;
+        font-size: 15px;
+    }
+    
+
+    .wrapper__quastion {
+        padding: 0 10px;
+    }
+
+    .block__question {
+        font-size: 18px;
+        width: 100%;
+        font-weight: 500;
+    }
+
+    .block__answers {
+        display: block;
+        width: 100%;
+        margin: 20px auto;
+        padding: 0px;
+        -webkit-column-gap: 20px;
+        column-gap: 5px;
+    }
+
+    .block__answer {
+        padding: 10px;
+    }
+
+    .toanswer,
+    .tohome,
+    .toform {
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+
+    .label {
+        min-height: 40px;
+        max-width: 380px;
+        padding: 10px 5px;
+        font-weight: 400;
+    }
+}
+
+/* Mac Book Laptops */

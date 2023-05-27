@@ -1,0 +1,50 @@
+.result {
+    margin: 0 auto;
+}
+
+.result__title {
+    /* text-align: center; */
+
+}
+
+.result__block {
+    margin-top: 20px;
+    padding: 20px;
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-grid-columns: auto auto;
+    grid-template-columns: auto auto;
+    row-gap: auto;
+    -webkit-column-gap: 20px;
+    column-gap: 20px;
+}
+
+.result__answer {
+    text-decoration: none;
+    color: #525151;
+}
+
+.result__score {
+
+}
+
+.testproiden {
+    padding-top: 15px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 48px;
+    color: #000000;
+}
+
+.resic {
+    padding: 55px 15px 50px 15px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 77px;
+    color: #000000;
+}

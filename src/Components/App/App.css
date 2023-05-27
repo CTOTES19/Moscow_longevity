@@ -1,0 +1,70 @@
+/* Google fonts */
+/* :root {
+  --bgc: #0084BC;
+  --footer-bgc: #036088;
+  --text: #37373;
+  --white: #ffffff;
+} */
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: white;
+}
+/* containers */
+.container {
+  margin: 0 auto;
+  width: 1350px;
+}
+
+/* OTHER STYLES =========================================================================================================== */
+.snippet {
+  font-size: 20px;
+}
+.toup-max {
+  z-index: 9999999999 !important;
+}
+.toup {
+  z-index: 9999999989 !important;
+}
+.XTranslate {
+  z-index: -1;
+  visibility: hidden;
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  left: -100%;
+}
+/* RESPONSIVE STYLES =========================================================================================================== */
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 960px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .container {
+    width: 790px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+      width: 720px;
+    }
+    
+    
+}
+
+@media screen and (max-width: 576px) { 
+  .container {
+    width: 100%;
+  }
+}

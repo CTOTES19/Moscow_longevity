@@ -1,0 +1,50 @@
+.amain {
+    margin-top: 70px;
+}
+
+
+.amain--wrapper {
+    position: relative;
+    /* min-height: 600px; */
+    /* width: 100%; */
+}
+
+.amain--content {
+    /* width: 100%; */
+    /* height: 100%; */
+}
+
+.amain--content img {
+    width: 100%;
+    /* height: 100%; */
+}
+
+.amain--text {
+    padding: 15px;
+    position: absolute;
+    top: 70px;
+    left: 70px;
+    width: 680px;
+    background-color: rgba(0, 0, 0, 0.373);
+    height: 500px;
+}
+
+
+.amain--text-title {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF
+}
+
+.amain--text-subtitle {
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}

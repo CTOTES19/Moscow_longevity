@@ -1,0 +1,90 @@
+
+.tcomp {
+    margin-bottom: 15px;
+}
+.tcomp-wrapper-tags {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+
+}
+
+.tcomp-wrapper-tags-tag {
+    padding: 5px 10px 5px 10px;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    color: #2A8AC0;
+    width: auto;
+    background: #EAEAEA;
+    border-radius: 15px;
+}
+
+.tcomp--wrapper {
+    padding: 20px;
+    width: 95%;
+    height: auto;
+    
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 15px;
+}
+
+
+.tcomp--wrapper-title {
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.tcomp--wrapper-subtitle {
+    margin-top: 10px;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000000;
+}
+
+.tcomp--wrapper-group-span {
+    color: #8c8c8c;
+    font-weight: 300;
+}
+.tcomp--wrapper-group {
+    margin-top: 12px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.tcomp--wrapper-times {
+    margin-top: 10px;
+}
+
+.tcomp--wrapper-times-time {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+
+
+.tcomp--wrapper-btn {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    color: #FFFFFF;
+    margin-top: 10px;
+    width: 178px;
+    height: 54px;
+    background: #2A8AC0;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+}

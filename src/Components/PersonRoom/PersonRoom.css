@@ -1,0 +1,154 @@
+.Private {
+    width: 100%;
+    margin: 0px auto;
+    padding: 5px;
+    color: #fff;
+    padding: 100px 0px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.pd {
+    padding: 0 20px;
+}
+
+.private-title {
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 100%;
+    color: #FFFFFF;
+    width: 100%;
+    border-bottom: 1px solid #fff;
+    padding: 20px;
+}
+
+.private-title2 {
+    width: 100%;
+    margin-top: 26px;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 100%;
+    color: #FFFFFF;
+}
+
+.room__data__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    align-items: center;
+}
+
+.room__data {
+    width: 500px;
+}
+
+.room__data-name, .room__data-surname, .room__data-email {
+    display: flex;
+    gap: 10%;
+    flex-wrap: wrap;
+    width: 600px;
+}
+
+.index, .value {
+    padding: 10px 0px;
+    /*margin-top: 26px;*/
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+
+.index {
+    font-weight: 400;
+    width: 130px;
+    /*width: auto;*/;
+}
+
+.value {
+    width: auto;
+    margin-right: auto;
+    font-weight: 500;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.data__photo {
+    margin-left: auto;
+    padding: 0 10%;
+}
+
+.user-avatar {
+    /*width: 100%;*/
+}
+
+@media screen and (max-width: 768px) {
+    .room__data__wrapper {
+        flex-direction: column-reverse;;
+    }
+
+    .room__data {
+        margin: 0 auto;
+    }
+
+    .data__photo {
+        margin: 10px auto;
+        width: 30%;
+        padding: 20px;
+    }
+
+    .data__photo img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 727px) {
+    .room__data__wrapper {
+        flex-direction: column-reverse;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .room__data {
+        width: 100%;
+        padding: 0px;
+        text-align: left;
+        margin: 0 auto;
+    }
+
+    .data__photo {
+        margin: 10px auto;
+        width: 30%;
+        padding: 20px;
+    }
+
+    .room__data-name, .room__data-surname, .room__data-email {
+        display: flex;
+        gap: 10%;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .index {
+        font-weight: 400;
+        width: 100%;
+        margin: 0 auto;
+        /*width: auto;*/;
+    }
+
+    .value {
+        width: 100%;
+        margin-right: auto;
+        font-weight: 500;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .data__photo {
+        margin: 10px auto;
+        width: 70%;
+        padding: 20px;
+    }
+}
