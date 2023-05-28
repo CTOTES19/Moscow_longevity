@@ -6,6 +6,7 @@ import "./PersonRoom.css";
 import axios from "axios";
 import userAvatar from "../../assets/icons/user-avatar.png";
 import { SERVER_URL } from "../../vars";
+import { Helmet } from "react-helmet";
 
 const PersonRoom = () => {
   const [username, setUsername] = useState("");
@@ -108,6 +109,9 @@ const PersonRoom = () => {
   if (editing) {
     return (
       <>
+            <Helmet>
+            <style>{'body { background-color: #fff; }'}</style>
+            </Helmet>
         <Header />
         <section className="Private container">
           <div className="private-wrapper">
@@ -118,10 +122,10 @@ const PersonRoom = () => {
               <h2>Ваши персональные данные</h2>
             </div>
             <div className="user-profile profile_container">
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit} className="form-edit">
                 <div className="edit-user-profile">
-                  <label>
-                    Имя пользователя:
+                  <label className="edit-user-profile-label">
+                   <div className="edit-user-profile-index"> Имя пользователя:</div>
                     <input
                       type="text"
                       value={username}
@@ -131,8 +135,8 @@ const PersonRoom = () => {
                   </label>
                 </div>
                 <div className="edit-user-profile">
-                  <label>
-                    ФИО:
+                  <label className="edit-user-profile-label">
+                    <div className="edit-user-profile-index">ФИО:</div>
                     <input
                       type="text"
                       value={fio}
@@ -142,8 +146,8 @@ const PersonRoom = () => {
                   </label>
                 </div>
                 <div className="edit-user-profile">
-                  <label>
-                    Email:
+                  <label className="edit-user-profile-label">
+                    <div className="edit-user-profile-index">Email:</div>
                     <input
                       type="text"
                       value={email}
@@ -152,8 +156,8 @@ const PersonRoom = () => {
                   </label>
                 </div>
                 <div className="edit-user-profile">
-                  <label>
-                    Password:
+                  <label className="edit-user-profile-label">
+                    <div className="edit-user-profile-index">Password:</div>
                     <input
                       type="password"
                       value={password}
@@ -163,8 +167,8 @@ const PersonRoom = () => {
                   </label>
                 </div>
                 <div className="edit-user-profile">
-                  <label>
-                    Дата рождения:
+                  <label className="edit-user-profile-label">
+                    <div className="edit-user-profile-index">Дата рождения:</div>
                     <InputMask
                       mask="99/99/9999"
                       // maskChar="_"
@@ -180,8 +184,8 @@ const PersonRoom = () => {
                   </label>
                 </div>
                 <div className="edit-user-profile">
-                  <label onChange={(e) => setSex(e.target.value)}>
-                    Пол:
+                  <label onChange={(e) => setSex(e.target.value)} className="edit-user-profile-label">
+                    <div className="edit-user-profile-index">Пол:</div>
                     <select name="sex" value={sex}>
                       <option value="Мужской">Мужской</option>
                       <option value="Женский">Женский</option>
@@ -195,8 +199,8 @@ const PersonRoom = () => {
                   </label>
                 </div>
                 <div className="edit-user-profile">
-                  <label>
-                    Город:
+                  <label className="edit-user-profile-label">
+                    <div className="edit-user-profile-index">Город:</div>
                     <input
                       type="text"
                       value={city}
@@ -205,8 +209,9 @@ const PersonRoom = () => {
                   </label>
                 </div>
                 <div className="edit-user-profile">
-                  <label>
-                    Адресс проживания:
+                  <label className="edit-user-profile-label">
+                    <div className="edit-user-profile-index">Адресс проживания:</div>
+                    
                     <input
                       type="text"
                       value={addressofresidence}
@@ -215,8 +220,9 @@ const PersonRoom = () => {
                   </label>
                 </div>
                 <div className="edit-user-profile">
-                  <label>
-                    Телефон:
+                  <label className="edit-user-profile-label">
+                    <div className="edit-user-profile-index">Телефон:</div>
+
                     <InputMask
                       mask="+7 (999) 999-99-99"
                       maskChar="_"
@@ -258,6 +264,9 @@ const PersonRoom = () => {
   } else {
     return (
       <>
+            <Helmet>
+            <style>{'body { background-color: #fff; }'}</style>
+            </Helmet>
         <Header />
         <section className="Private container">
           <div className="private-wrapper">
@@ -306,15 +315,15 @@ const PersonRoom = () => {
                   <div className="data-email__index index">Телефон:</div>
                   <div className="data-email__value value">{phone}</div>
                 </div>
-                <button onClick={handleEditProfile}>Редактировать</button>
+                <button onClick={handleEditProfile} className="room__redic">Редактировать данные</button>
               </div>
-              <div className="data__photo">
+              {/* <div className="data__photo">
                 <img  
                   src={userAvatar}
                   alt="user avatar"
                   className="user-avatar"
                 />
-              </div>
+              </div> */}
             </div>
           </div>
         </section>

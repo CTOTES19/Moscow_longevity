@@ -38,9 +38,33 @@ body {
 	opacity: 0;
 	font-size: 1.8rem;
 } */
+.nav-btn {
+	padding: 10px 15px;
+	color: var(--headerColorLight);
+	text-decoration: none;
+	background: #FFFFFF;
+	border-radius: 15px;
+	border: none;
+	font-size: 20px;
+	cursor: pointer;
+	transition: background 0.3s;
+}
 
+.nav-btn:hover {
+	background: #b1b1b1;
+}
 
-
+.nav-down-select {
+	padding: 10px 15px;
+	color: black;
+	text-decoration: none;
+	background-color: #FFFFFF;
+	border-radius: 15px;
+	transition: background 0.3s;
+}
+.nav-down-select:hover {
+	background-color: #c2c2c2;
+}
 
 .header {
   position: fixed;

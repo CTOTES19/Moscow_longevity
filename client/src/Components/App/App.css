@@ -11,6 +11,9 @@
 body {
   background-color: white;
 }
+a {
+  text-decoration: none;
+}
 /* containers */
 .container {
   margin: 0 auto;

@@ -100,11 +100,11 @@ const Header = () => {
                 >
                   Личный кабинет
                 </Link>
-                <NavLink to="/">
+                <Link to="/">
                   <div className="nav-down-select" onClick={logout}>
                     Выйти
                   </div>
-                </NavLink>
+                </Link>
               </>
             )}
           </div>

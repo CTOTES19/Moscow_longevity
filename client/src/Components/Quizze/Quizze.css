@@ -55,7 +55,7 @@
     -ms-flex-align: center;
     align-items: center;
     padding: 20px 50px 20px 50px;
-    background: #ff226d;
+    background: #036088;
     color: #eee;
     font-size: 23px;
     width: 100%;
@@ -67,7 +67,7 @@
 }
 
 .toanswer:hover {
-    background: #bb194f;
+    background: #03425d;
 }
 
 .active-g {

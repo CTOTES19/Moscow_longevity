@@ -6,6 +6,7 @@ import axios from "axios";
 import clesed from "../../../src/assets/icons/Cross.svg";
 import "./SignUpForm.css";
 import {SERVER_URL} from '../../vars'
+import { Helmet } from "react-helmet";
 
 const SignUpForm = () => {
   const [username, setUsername] = useState("");
@@ -56,6 +57,9 @@ const SignUpForm = () => {
 
   return (
     <>
+        <Helmet>
+      <style>{'body { background-color: #0D5E8B; }'}</style>
+      </Helmet>
       <div className={active ? "modal active__modal" : "modal"}>
         <div
           className="modal-content-signup toup"
@@ -67,7 +71,7 @@ const SignUpForm = () => {
             </div>
           </Link>
 
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} className="modal-main">
             <div className="modal-title">Регистрация</div>
             {/* <div className="modal-hintname mt">Имя</div> */}
             {/* <input 
@@ -85,7 +89,7 @@ const SignUpForm = () => {
         type="text" 
         placeholder='Ваша фамилия' /> */}
 
-            <div className="modal-hintemail mt">Username</div>
+            <div className="modal-hintname mt">Username</div>
             <input
               className="modal-email"
               onChange={(e) => setUsername(e.target.value)}
@@ -115,14 +119,6 @@ const SignUpForm = () => {
 
             {message && <p className="error">{message}</p>}
 
-            <div className="modal-secure">
-              Нажимая зарегистрироваться, вы подтверждаете, что ознакомились и
-              приняли условия{" "}
-              <Link to="/user-agreement">Пользовательского соглашения</Link> и{" "}
-              <Link to="/privacy_policy">
-                Уведомление о конфиденциальности пользователя
-              </Link>
-            </div>
 
             <button className="modal-reg" type="submit">
               Зарегистрироваться

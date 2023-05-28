@@ -5,6 +5,7 @@ import {SERVER_URL} from '../../vars'
 import axios from "axios";
 import clesed from "../../../src/assets/icons/Cross.svg";
 import "./LoginForm.css";
+import { Helmet } from "react-helmet";
 
 const LoginForm = () => {
   const [active, setActive] = useState(true);
@@ -46,6 +47,11 @@ const LoginForm = () => {
   };
 
   return (
+    <>
+
+      <Helmet>
+      <style>{'body { background-color: #0D5E8B; }'}</style>
+      </Helmet>
     <div className={active ? "modal active__modal" : "modal"}>
       <div className="modal-content-login" onClick={(e) => e.stopPropagation()}>
         <Link to="/">
@@ -55,7 +61,7 @@ const LoginForm = () => {
         </Link>
 
 
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="modal-main">
           <div className="modal-title">Вход</div>
 
           <div className="modal-hintemail-sign mt">Email</div>
@@ -76,17 +82,6 @@ const LoginForm = () => {
             placeholder="Пароль"
           />
           {message && <p className="error">{message}</p>}
-          <div className="modal-secure">
-            Нажимая зарегистрироваться, вы подтверждаете, что ознакомились и
-            приняли условия{" "}
-            <Link to="/user-agreement" target="_blank">
-              Пользовательского соглашения
-            </Link>{" "}
-            и{" "}
-            <Link to="/privacy_policy">
-              Уведомление о конфиденциальности пользователя
-            </Link>
-          </div>
 
           {/* <button onClick={() => store.login(email, password)}>Логин</button> */}
           <button className="modal-reg" type="submit">
@@ -102,6 +97,7 @@ const LoginForm = () => {
         </form>
       </div>
     </div>
+    </>
   );
 };
 
