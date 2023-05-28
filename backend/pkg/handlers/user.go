@@ -12,36 +12,6 @@ import (
 	"golang.org/x/crypto/bcrypt"
 )
 
-// // получаем данные пользователя
-// func GetUser(w http.ResponseWriter, r *http.Request) {
-// 	utils.EnableCORS(&w)
-// 	if r.Method == "OPTIONS" {
-// 		return
-// 	}
-// 	// Установка соединения с базой данных MySQL
-// 	db, err := sql.Open("mysql", vars.DBConn+vars.DBName)
-// 	if err != nil {
-// 		log.Fatal(err)
-// 	}
-// 	defer db.Close()
-
-// 	id := mux.Vars(r)["id"]
-
-// 	// Выполнение запроса к базе данных для получения данных пользователя по ID
-// 	var user User
-// 	err = db.QueryRow("SELECT id, username, fio, birth, city, addressofresidence, phone, email FROM users WHERE id = ?", id).Scan(&user.ID, &user.Username, &user.FIO, &user.Birth, &user.City, &user.AddressOfResidence, &user.Phone, &user.Email)
-// 	// err = db.QueryRow("SELECT id, username = ?, fio = ?, birth = ?, city = ?, addressofresidence = ?, phone = ?, email = ? FROM users WHERE id = ?", id).Scan(&user.ID, &user.Username, &user.FIO, &user.Birth, &user.City, &user.AddressOfResidence, &user.Phone, &user.Phone)
-// 	if err != nil {
-// 		http.Error(w, err.Error(), http.StatusInternalServerError)
-// 		return
-// 	}
-
-// 	response, err := json.Marshal(user)
-// 	if err != nil {
-// 		http.Error(w, err.Error(), http.StatusInternalServerError)
-// 		return
-// 	}
-
 // 	w.Header().Set("Content-Type", "application/json")
 // 	w.Write(response)
 // }
