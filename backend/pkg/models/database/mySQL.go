@@ -73,8 +73,7 @@ func InitTables() {
 		email VARCHAR(50) DEFAULT '',
 		password VARCHAR(255) NOT NULL,
 		UNIQUE KEY (username),
-		UNIQUE KEY (email),
-		UNIQUE KEY (phone)
+		UNIQUE KEY (email)
 	);`, "[DB]: Таблицы созданы...")
 }
 
@@ -146,33 +145,6 @@ func BackupDB() {
 	}
 
 	log.Printf("[БД]: Резервная копия создана и сохранена в %s\n", backupFileName)
-
-	// // Проверяем размер файла
-	// fileInfo, err := os.Stat(backupFileName)
-	// if err != nil {
-	// 	log.Fatalf("Ошибка при получении информации о файле %s: %v", backupFileName, err)
-	// }
-
-	// if fileInfo.Size() > 4*1024*1024 { // 20 мб в байтах 20*1024*1024
-	// 	// Создаем новый архив
-	// 	zipFile, err := os.Create(zipFileName)
-	// 	if err != nil {
-	// 		log.Fatalf("Ошибка при создании zip файла %s: %v", zipFileName, err)
-	// 	}
-	// 	defer zipFile.Close()
-
-	// 	zipWriter := zip.NewWriter(zipFile)
-	// 	defer zipWriter.Close()
-
-	// 	// Добавляем файл в архив
-	// 	err = addFileToZip(backupFileName, zipWriter)
-	// 	if err != nil {
-	// 		log.Fatalf("Ошибка добавления файла %s в zip архив: %v", backupFileName, err)
-	// 	}
-	// 	fmt.Printf("Архив %s успешно создан!\n", zipFileName)
-	// } else {
-	// 	fmt.Printf("Файл %s не нуждается в архивации!\n", backupFileName)
-	// }
 }
 
 // Функция для добавления файла в архив
