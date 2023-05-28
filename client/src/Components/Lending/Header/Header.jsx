@@ -64,22 +64,22 @@ const Header = () => {
       <div className="container">
         <div className="header--wrapper">
           <nav className="header--nav" ref={navRef}>
-            <Link href="/#about" className="header--link">
+            <a href="/#about" className="header--link">
               О проекте
-            </Link>
-            <Link href="/#" className="header--link">
+            </a>
+            <Link to="/#" className="header--link">
               Занятия
             </Link>
-            <Link href="/#" className="header--link">
+            <Link to="/#" className="header--link">
               Как участвовать?
             </Link>
-            <Link href="/#" className="header--link">
+            <Link to="/#" className="header--link">
               Новости
             </Link>
-            <Link href="/#" className="header--link">
+            <Link to="/#" className="header--link">
               Контакты
             </Link>
-            <Link href="/#" className="header--link">
+            <Link to="/#" className="header--link">
               Галерея
             </Link>
             {/* <button
