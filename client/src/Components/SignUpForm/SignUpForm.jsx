@@ -89,7 +89,7 @@ const SignUpForm = () => {
         type="text" 
         placeholder='Ваша фамилия' /> */}
 
-            <div className="modal-hintname mt">Username</div>
+            <div className="modal-hintname mt">Имя пользователя</div>
             <input
               className="modal-email"
               onChange={(e) => setUsername(e.target.value)}
