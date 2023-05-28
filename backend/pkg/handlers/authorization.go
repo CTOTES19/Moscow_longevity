@@ -13,14 +13,16 @@ import (
 )
 
 type User struct {
-	ID         int    `json:"id"`
-	Username   string `json:"username"`
-	Name       string `json:"name"`
-	Surname    string `json:"surname"`
-	Patronymic string `json:"patronymic"`
-	Age        string `json:"age"`
-	Email      string `json:"email"`
-	Password   string `json:"password"`
+	ID                 int    `json:"id"`
+	Username           string `json:"username"`
+	FIO                string `json:"fio"`
+	Birth              string `json:"birth"`
+	City               string `json:"city"`
+	AddressOfResidence string `json:"addressofresidence"`
+	Phone              string `json:"phone"`
+	Email              string `json:"email"`
+	Sex                string `json:"sex"`
+	Password           string `json:"password"`
 }
 
 // SignUp handler

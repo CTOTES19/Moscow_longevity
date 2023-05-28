@@ -20,8 +20,8 @@ var (
 	DBHost = os.Getenv("DB_HOST")
 	DBPort = os.Getenv("DB_PORT")
 	// DB connection...
-	// unux (Linux/Mac OS) connection without pass
-	// DBConn = fmt.Sprintf("%s@tcp(%s:%s)/%s", DBUser, DBHost, DBPort, DBName)
-	// other type of connection with pass
 	DBConn = fmt.Sprintf("%s:%s@tcp(%s:%s)/", DBUser, DBPass, DBHost, DBPort)
+	// SSL/TLS certs path
+	Cert = "/var/www/certs/domain-example.ru.pub"
+	Key  = "/var/www/private/domain-example.ru.key"
 )

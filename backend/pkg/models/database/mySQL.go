@@ -62,18 +62,20 @@ func InitTables() {
 	// Create users table
 	DBQuerry(`
 	CREATE TABLE IF NOT EXISTS users (
-		id INT NOT NULL AUTO_INCREMENT,
-		username VARCHAR(50) NOT NULL DEFAULT '',
-		email VARCHAR(50) NOT NULL DEFAULT '',
-		password VARCHAR(255) NOT NULL DEFAULT '',
-		name VARCHAR(255) DEFAULT '',
-		surname VARCHAR(255) DEFAULT '',
-		patronymic VARCHAR(255) DEFAULT '',
-		age INT UNSIGNED DEFAULT 0,
-		PRIMARY KEY (id),
+		id INT AUTO_INCREMENT PRIMARY KEY,
+		username VARCHAR(50) NOT NULL,
+		fio VARCHAR(255) DEFAULT '',
+		birth VARCHAR(20) DEFAULT '',
+		sex VARCHAR(40) DEFAULT 'Не указан',
+		city VARCHAR(100) DEFAULT '',
+		addressofresidence VARCHAR(255) DEFAULT '',
+		phone VARCHAR(20) DEFAULT '',
+		email VARCHAR(50) DEFAULT '',
+		password VARCHAR(255) NOT NULL,
 		UNIQUE KEY (username),
-		UNIQUE KEY (email)
-	  );`, "[DB]: Таблицы созданы...")
+		UNIQUE KEY (email),
+		UNIQUE KEY (phone)
+	);`, "[DB]: Таблицы созданы...")
 }
 
 // Создаём бэкап БД

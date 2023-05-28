@@ -55,7 +55,7 @@ func main() {
 
 	/*
 	* Start backup DB
-	* Every 5 hours
+	* Every 4 hours
 	 */
 	go func() {
 		for range time.Tick(4 * time.Hour) {
@@ -69,8 +69,8 @@ func main() {
 	// Start server
 	log.Fatal(http.ListenAndServe(vars.PORT, corsHandler(router)))
 
-	// Start SSL server (Production Server)
-	// log.Fatal(http.ListenAndServeTLS(vars.PORT, "var/certs/cert.pem", "var/certs/key.pem", corsHandler(router)))
+	// Start SSL (Production Server)
+	// log.Fatal(http.ListenAndServeTLS(vars.PORT, vars.Cert, vars.Key, corsHandler(router)))
 }
 
 func handleOptions(w http.ResponseWriter, r *http.Request) {
