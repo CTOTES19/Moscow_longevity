@@ -61,3 +61,13 @@
 .ahelp-img img {
     height: 100%;
 }
+
+@media screen and (max-width: 576px) {   
+    .ahelp-flex {
+        width: auto;
+    }
+
+    .ahelp-img {
+        display: none;
+    }
+}

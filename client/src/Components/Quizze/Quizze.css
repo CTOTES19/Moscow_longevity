@@ -15,7 +15,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    z-index: 1000000001 !important;
+    /* z-index: 1000000001 !important; */
     background: var(--bgc);
 }
 
@@ -23,12 +23,12 @@
     margin: 0 auto;
     min-width: 100%;
     padding: 0px 20px;
-    z-index: 1000000001 !important;
+    /* z-index: 1000000001 !important; */
 }
 
 .block__wrapper {
     margin-top: 7%;
-    z-index: 1000000001 !important;
+    /* z-index: 1000000001; */
 }
 
 .block {
@@ -133,7 +133,7 @@
         max-width: 380px;
         padding: 10px 5px;
         font-weight: 400;
-        z-index: 1000000001 !important;
+        /* z-index: 1000000001 !important; */
     }
 }
 
@@ -176,7 +176,7 @@
         padding: 10px;
         -webkit-column-gap: 20px;
         column-gap: 20px;
-        z-index: 1000000001 !important;
+        /* z-index: 1000000001 !important; */
     }
 
     .toanswer,

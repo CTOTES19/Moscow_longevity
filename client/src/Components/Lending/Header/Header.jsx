@@ -9,6 +9,7 @@ import "./Header.css";
 const Header = () => {
   const navRef = useRef();
 
+  
   const showNavbar = () => {
     navRef.current.classList.toggle("responsive_nav");
   };
@@ -31,6 +32,9 @@ const Header = () => {
   function handleNavBtnClick(el) {
     el.classList.toggle("nav-btn__active");
   }
+  const handleClick = () => {
+    window.location.href = "/";
+  };
 
   // logout
   function logout() {
@@ -83,7 +87,15 @@ const Header = () => {
 								onClick={showNavbar}>
 								<FaTimes />
 							</button> */}
+              
           </nav>
+          <div onClick={handleBurger} className="hamburger">
+                <span className="bar"></span>
+                <span className="bar"></span>
+                <span className="bar"></span>
+          </div>
+        
+
           <div className="header--wrapper-person">
             {!username && (
               <NavLink to="/login">
@@ -113,7 +125,69 @@ const Header = () => {
 							<FaBars />
 						</button> */}
         </div>
-      </div>
+
+        <div
+          className={
+            active === true
+              ? "active-burger-modal burger-modal "
+              : "burger-modal"
+          }
+        >
+          <div className="burger-modal-wrapper">
+            <div onClick={() => setActive(false)} className="fa-bur">
+              <FaTimes />
+            </div>
+            <div className="burger-modal-block">
+              <NavLink to="/quizze" className="burger-modal-item">
+                О проекте
+              </NavLink>
+              <NavLink to="/courses" className="burger-modal-item">
+                Расписание занятий
+              </NavLink>
+              <a href="/explore" className="burger-modal-item">
+                Как стать участником
+              </a>
+              <a href="/#contacts" className="burger-modal-item">
+                Центры московского долголетия
+              </a>
+              <a href="/#contacts" className="burger-modal-item">
+                Система активного долголетия
+              </a>
+              {/* <NavLink to='/Room' className="burger-modal-item">Личный кабинет</NavLink> */}
+              <div className="LK">
+
+                  {!username && (
+                    <NavLink to="/login">
+                      <button className="nav-btn">Войти</button>
+                    </NavLink>
+                  )}
+
+                      {username && (
+                        <>
+                          <img src={usere} alt="person" />
+                          <Link
+                            to={`/api/users/${id}`}
+                            className="burger-title-lk "
+                          >
+                            Личный кабинет
+                          </Link>
+                          <Link to="/">
+                            <div className="burger-lk-btn" onClick={logout}>
+                              Выйти
+                            </div>
+                          </Link>
+                        </>
+                      )}
+                 
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        
     </header>
   );
 };

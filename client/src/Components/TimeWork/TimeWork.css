@@ -21,3 +21,10 @@
 .timework--wrapper-content {
     display: flex;
 }
+
+@media screen and (max-width: 576px) { 
+
+    .timework--wrapper-content {
+        flex-wrap: wrap;
+    }
+ }

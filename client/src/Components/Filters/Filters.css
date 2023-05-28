@@ -23,3 +23,14 @@
 .filters--button:hover {
     background: #216b95;
 }
+
+
+@media screen and (max-width: 576px) { 
+    .filters--wrapper {
+        justify-content: center;
+        padding-top: 60px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+}

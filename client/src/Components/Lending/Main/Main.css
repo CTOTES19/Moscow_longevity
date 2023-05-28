@@ -49,3 +49,18 @@
   height: 100%;
   width: 100%;
 }
+
+
+@media screen and (max-width: 576px) { 
+.main--description-photo img {
+  margin: 0 auto;
+  text-align: center;
+}
+  .main--description-title {
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 56px;
+    align-items: center;
+    color: #FFFFFF;
+  }
+}

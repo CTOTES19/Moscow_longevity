@@ -24,12 +24,12 @@ a {
 .snippet {
   font-size: 20px;
 }
-.toup-max {
+/* .toup-max {
   z-index: 9999999999 !important;
 }
 .toup {
   z-index: 9999999989 !important;
-}
+} */
 .XTranslate {
   z-index: -1;
   visibility: hidden;

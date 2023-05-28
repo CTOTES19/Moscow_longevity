@@ -55,3 +55,17 @@
     height: 4px;
     background-color: #036088;
 }
+
+
+@media screen and (max-width: 576px) {  
+    .user--wrapper-flex {
+        gap: 25px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .user--wrapper-flex-line {
+
+        display: none;
+    }
+ }

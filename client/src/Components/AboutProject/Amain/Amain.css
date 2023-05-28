@@ -48,3 +48,26 @@
     align-items: center;
     color: #FFFFFF;
 }
+
+@media screen and (max-width: 576px) {  
+    .amain--text {
+        display: none;
+        padding: 15px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.373);
+            height: 100%;
+    }
+
+    .amain--text-title {
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .amain--text-subtitle {
+        font-size: 17px;
+        line-height: 20px;
+    }
+}
