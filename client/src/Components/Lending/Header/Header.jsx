@@ -2,7 +2,7 @@ import React, { Component, FC, useEffect, useState, useRef } from "react";
 import { Link, NavLink, Route, Routes } from "react-router-dom";
 import { SERVER_URL } from "../../../vars";
 import { FaBars, FaTimes } from "react-icons/fa";
-import user from "../../../assets/icons/User.svg";
+import usere from "../../../assets/icons/User.svg";
 
 import "./Header.css";
 
@@ -93,7 +93,7 @@ const Header = () => {
 
             {username && (
               <>
-                <img src={user} alt="person" />
+                <img src={usere} alt="person" />
                 <Link
                   to={`/api/users/${id}`}
                   className="header--wrapper-person-link"

@@ -165,11 +165,18 @@ const PersonRoom = () => {
                 <div className="edit-user-profile">
                   <label>
                     Дата рождения:
-                    <input
+                    <InputMask
+                      mask="99/99/9999"
+                      // maskChar="_"
                       type="text"
                       value={birth}
                       onChange={(e) => setBirth(e.target.value)}
                     />
+                    {/* <input
+                      type="text"
+                      value={birth}
+                      onChange={(e) => setBirth(e.target.value)}
+                    /> */}
                   </label>
                 </div>
                 <div className="edit-user-profile">
@@ -302,7 +309,7 @@ const PersonRoom = () => {
                 <button onClick={handleEditProfile}>Редактировать</button>
               </div>
               <div className="data__photo">
-                <img
+                <img  
                   src={userAvatar}
                   alt="user avatar"
                   className="user-avatar"
