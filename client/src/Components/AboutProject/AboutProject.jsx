@@ -8,7 +8,7 @@ import Asliderauto from './Asliderauto/Asliderauto'
 
 const AboutProject = () => {
   return (
-    <div className='AboutProject'>
+    <div className='AboutProject' id='about'>
       <Amain/>
       <Asliderauto/>
       <Ahelpwidget/>

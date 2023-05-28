@@ -12,9 +12,6 @@ import (
 	"golang.org/x/crypto/bcrypt"
 )
 
-// 	w.Header().Set("Content-Type", "application/json")
-// 	w.Write(response)
-// }
 // получаем данные пользователя
 func GetUser(w http.ResponseWriter, r *http.Request) {
 	utils.EnableCORS(&w)

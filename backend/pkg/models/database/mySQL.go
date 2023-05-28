@@ -94,7 +94,6 @@ func BackupDB() {
 
 	// Имя файла для бэкапа и zip архива
 	backupFileName := fmt.Sprintf("./backups/%s.sql", DateFormat)
-	// zipFileName := fmt.Sprintf("./backups/archives/%s.zip", DateFormat)
 
 	// Создаём бэкап
 	backupFile, err := os.Create(backupFileName)
@@ -204,7 +203,6 @@ func SaveStorage() {
 		})
 
 		// Создаем новый архив
-		// zipFileName := fmt.Sprintf("%s.zip", fileList[0])
 		zipFile, err := os.Create(zipFileName)
 		if err != nil {
 			log.Fatalf("Ошибка создания zip файла %s: %v", zipFileName, err)
